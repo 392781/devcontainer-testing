@@ -1,0 +1,10 @@
+_commit: v1.0.0-16-g83641d0
+_src_path: devcontainer-template/
+dev_language: R
+include_examples: true
+project_name: test
+rootless_rootful: Jetstream2 (NSF ACCESS Supercompting)
+use_jupyterlab: true
+use_quarto: true
+use_rstudio: true
+use_vscode_ext: true
