@@ -1,11 +1,9 @@
 {
-    "name": "test",
-    "build": {
-        "dockerfile": "Dockerfile",
+	"build": {
+		"dockerfile": "Dockerfile",
 		"args": { "COPY_CONTEXT": "." }
-    },
-
-    "overrideCommand": false,
+	},
+	"overrideCommand": false,
 	
 	// Forward Jupyter port locally, mark required
 	"forwardPorts": [8888],
@@ -40,7 +38,10 @@
 	"remoteUser": "jovyan",
 	"runArgs": [
 			"--user=root",
+			"--env=NB_USER=jovyan",
+			"--env=CHOWN_HOME=yes",
 			"--env=GRANT_SUDO=yes",
-			"--env=RESTARTABLE=yes"
+			"--env=RESTARTABLE=yes",
+			"--workdir=/home/jovyan"
 	]
 }
